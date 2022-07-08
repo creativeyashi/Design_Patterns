@@ -1,6 +1,6 @@
 import java.util.*;
-class wifimanager{
-    public static wifimanager instance = new wifimanager();
+class WifiManager{
+    public static WifiManager instance = new WifiManager();
 
     private Map<String, String> configMap = new HashMap<String, String>() {{
         put("host", "internal.db");
@@ -9,7 +9,7 @@ class wifimanager{
         put("password", "pa$$w0rD");
     }};
 
-    private wifimanager() {
+    private WifiManager() {
 
     }
 
@@ -21,16 +21,16 @@ class wifimanager{
         return configMap.get(key);
     }
 
-    public static wifimanager getInstance() {
+    public static WifiManager getInstance() {
         return instance;
     }
 }
 public class Singleton
 {
     public static void main(String[] args) {
-        wifimanager c=wifimanager.getInstance();
+        WifiManager c=WifiManager.getInstance();
         c.update("port","123");
-        wifimanager c1=wifimanager.getInstance();
+        WifiManager c1=WifiManager.getInstance();
         c1.update("port","1234");
         System.out.println(c.get("port"));
     }
