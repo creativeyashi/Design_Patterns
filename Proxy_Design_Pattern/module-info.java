@@ -1,0 +1,2 @@
+module State.Design.Pattern {
+}
